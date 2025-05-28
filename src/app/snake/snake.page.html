@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Jogo da Cobrinha
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="game-container">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <div *ngIf="!isPlaying && !gameOver" class="button-container">
+    <ion-button (click)="startGame()">Jogar</ion-button>
+  </div>
+
+  <div *ngIf="gameOver" class="game-over">
+    Game Over
+    <ion-button (click)="resetGame()">Resetar</ion-button>
+  </div>
+</ion-content>
